@@ -1,0 +1,15 @@
+div#bookItem{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: calc(170px - 20px);
+  height: 210px;
+  margin: 5px;
+  padding: 10px;
+  padding-bottom: 30px;
+  border: 2px solid white;
+  background-color: grey;
+}
+div#bookItem>span{
+  align-self: flex-end;
+}

@@ -7,12 +7,18 @@ import './styles.css';
 import ReactLogo from '../../logo.svg';
 
 export default class Menu extends Component {
+
+  // Redirect to home page
+  goToHomePage = () => {
+    window.location = '/';
+  }
+
   // Display
   render() {
     return(
       <div id="mainMenu">
-        <img src={ReactLogo} alt="logo" />
-        <span>React Bookshelf</span>
+        <img onClick={this.goToHomePage} src={ReactLogo} alt="logo" />
+        <span onClick={this.goToHomePage}>React Bookshelf</span>
       </div>
     );
   }

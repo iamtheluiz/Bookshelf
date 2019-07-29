@@ -5,6 +5,7 @@ import './styles.css';
 
 // Page Components
 import Menu from '../../components/Menu';
+import BookList from '../../components/BookList';
 
 export default class Home extends Component{
   // Before component render
@@ -18,6 +19,7 @@ export default class Home extends Component{
     return(
       <div id="Home">
         <Menu />
+        <BookList />
       </div>
     );
   }
