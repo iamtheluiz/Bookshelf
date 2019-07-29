@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
 
-// Page style
+// Styles
 import './styles.css';
 
-// Page Components
+// Components
 import Menu from '../../components/Menu';
-import BookList from '../../components/BookList';
+import BookForm from '../../components/BookForm';
 
-export default class Home extends Component{
+export default class AddNewBook extends Component{
   // Before component render
   componentDidMount(){
     // Set page title
-    document.title = "Home"
+    document.title = "New Book"
   }
 
   // Display
   render(){
     return(
-      <div id="Home">
-        <Menu showAddBook />
-        <BookList />
+      <div id="addNewBook">
+        <Menu />
+        <BookForm />
       </div>
     );
   }

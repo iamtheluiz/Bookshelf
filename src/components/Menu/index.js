@@ -21,9 +21,11 @@ export default class Menu extends Component {
           <img onClick={this.goToHomePage} src={ReactLogo} alt="logo" />
           <span onClick={this.goToHomePage}>React Bookshelf</span>
         </div>
-        <div id="newBook">
-          <a href="/add-new-book"></a>
-        </div>
+        {this.props.showAddBook &&
+          <div id="newBook">
+            <a href="/add-new-book"></a>
+          </div>
+        }
       </>
     );
   }
