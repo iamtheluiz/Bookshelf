@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactLogo from '../../logo.svg';
 
 // Page style
-import './index.css';
+import './styles.css';
 
 export default class App extends Component{
   // Before component render
@@ -14,7 +14,7 @@ export default class App extends Component{
   // Display 
   render(){
     return (
-      <div className="App">
+      <div id="notFound">
         <img src={ReactLogo} alt="React logo"></img>
         <h1>Error 404</h1>
         <p>This is not a page from the site!</p>
