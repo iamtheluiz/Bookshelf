@@ -16,10 +16,15 @@ export default class Menu extends Component {
   // Display
   render() {
     return(
-      <div id="mainMenu">
-        <img onClick={this.goToHomePage} src={ReactLogo} alt="logo" />
-        <span onClick={this.goToHomePage}>React Bookshelf</span>
-      </div>
+      <>
+        <div id="mainMenu">
+          <img onClick={this.goToHomePage} src={ReactLogo} alt="logo" />
+          <span onClick={this.goToHomePage}>React Bookshelf</span>
+        </div>
+        <div id="newBook">
+          <a href="/add-new-book"></a>
+        </div>
+      </>
     );
   }
 }

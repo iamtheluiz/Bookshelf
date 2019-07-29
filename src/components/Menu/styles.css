@@ -8,6 +8,7 @@ div#mainMenu>img{
   height: 52px;
   margin-top: 1px;
   cursor: pointer;
+  animation: spin 10s linear infinite;
 }
 div#mainMenu>span{
   font-size: 20pt;
@@ -20,7 +21,49 @@ div#mainMenu>span{
     justify-content: center;
     align-items: center;
   }
+  div#newBook{
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
   div#mainMenu>img{
     margin-left: -18px;
   }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform:rotate(360deg);
+  }
+}
+
+div#newBook{
+  display: flex;
+  padding: 10px;
+}
+div#newBook>a{
+  color: white;
+  background-color: firebrick;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 37px;
+  border-radius: 100%;
+  font-size: 18pt;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+div#newBook>a::before{
+  content: " + ";
+}
+div#newBook>a:hover{
+  transition: width .2s ease-in-out;
+  border-radius: 5px;
+  width: 200px;
+}
+div#newBook>a:hover::after{
+  content: "Add New Book"
 }
