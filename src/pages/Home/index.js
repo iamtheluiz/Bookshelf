@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 // Page style
 import './styles.css';
 
+// Page Components
+import Menu from '../../components/Menu';
+
 export default class Home extends Component{
   // Before component render
   componentDidMount(){
@@ -14,7 +17,7 @@ export default class Home extends Component{
   render(){
     return(
       <div id="Home">
-        <h1>asdasd3</h1>
+        <Menu />
       </div>
     );
   }
