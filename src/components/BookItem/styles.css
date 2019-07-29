@@ -11,5 +11,7 @@ div#bookItem{
   background-color: grey;
 }
 div#bookItem>span{
+  width: 100%;
   align-self: flex-end;
+  text-align: left !important;
 }

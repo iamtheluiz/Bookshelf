@@ -12,14 +12,33 @@ export default class BookForm extends Component{
     event.preventDefault();
 
     const formData = document.getElementById("bookForm").elements;
+    const book = {
+      name: formData.bookName.value,
+      author: formData.author.value
+    };
+    
+    // Get all the books
+    let state = {};
+    if(localStorage.getItem('@bookshelf/data') !== null){
+      state = JSON.parse(localStorage.getItem('@bookshelf/data'));
+    }else{
+      localStorage.setItem('@bookshelf/data', {});
+      state = {
+        books: []
+      };
+    }
 
-    console.log(formData);
+    state['books'].push(book);
+
+    localStorage.setItem('@bookshelf/data', JSON.stringify(state));
+
+    window.location = '/';
   }
 
   // Display
   render(){
     return(
-      <form id="bookForm" onSubmit={this.addNewBook}>
+      <form id="bookForm" onSubmit={this.addNewBook} autoComplete="off">
         <h1><img src={bookIcon} alt="Book Icon" /> Add a new Book </h1>
         <label>
           Name:
