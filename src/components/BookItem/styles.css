@@ -1,16 +1,16 @@
-div#bookItem{
+div.bookItem{
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   width: calc(170px - 20px);
-  height: 210px;
+  height: 230px;
   margin: 5px;
   padding: 10px;
   padding-bottom: 30px;
   border: 2px solid white;
   background-color: grey;
 }
-div#bookItem>span{
+div.bookItem>span{
   width: 100%;
   align-self: flex-end;
   text-align: left !important;

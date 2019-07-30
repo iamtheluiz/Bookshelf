@@ -10,12 +10,6 @@ export default class BookForm extends Component{
   // Add new book
   addNewBook(event){
     event.preventDefault();
-
-    const formData = document.getElementById("bookForm").elements;
-    const book = {
-      name: formData.bookName.value,
-      author: formData.author.value
-    };
     
     // Get all the books
     let state = {};
@@ -27,6 +21,14 @@ export default class BookForm extends Component{
         books: []
       };
     }
+
+    const formData = document.getElementById("bookForm").elements;
+    const book = {
+      key: String(state['books'].length),
+      name: formData.bookName.value,
+      author: formData.author.value,
+      cover: formData.bookCover.value
+    };
 
     state['books'].push(book);
 
@@ -47,6 +49,10 @@ export default class BookForm extends Component{
         <label>
           Author:
           <input type="text" name="author" required />
+        </label>
+        <label>
+          Book Cover image link:
+          <input type="text" name="bookCover" required />
         </label>
         <button type="submit">Submit</button>
       </form>
