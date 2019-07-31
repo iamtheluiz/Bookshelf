@@ -10,24 +10,20 @@ div#newBook{
   display: flex;
   box-sizing: border-box;
   width: 100%;
-  padding: 10px;
+  margin: 10px;
 }
 div#newBook>a{
   color: white;
   background-color: firebrick;
   width: 40px;
   height: 40px;
+  line-height: 45px;
   text-align: center;
-  line-height: 37px;
   border-radius: 100%;
   font-size: 18pt;
   text-decoration: none;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
-}
-div#newBook>a::before{
-  content: " + ";
 }
 div#newBook>a:hover{
   transition: width .2s ease-in-out;

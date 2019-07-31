@@ -1,11 +1,11 @@
 div#bookInformation{
   box-sizing: border-box;
   display: flex;
-  padding: 30px;
+  padding: 10px;
 }
 div#bookInformation>img{
   box-sizing: border-box;
-  width: 300px;
+  width: 280px;
   height: auto;
   margin-right: 20px;
 }
@@ -20,10 +20,14 @@ div#bookInformation>span::before{
 }
 
 @media (max-width: 600px){
+  div#bookInformation{
+    flex-direction: column;
+  }
   div#bookInformation>img{
     margin: 0 auto;
   }
-  div#bookInformation{
-    flex-direction: column;
+  div#bookInformation>div{
+    box-sizing: border-box;
+    padding: 10px;
   }
 }

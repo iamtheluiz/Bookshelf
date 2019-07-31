@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { MdAdd } from 'react-icons/md';
 
 // Styles
 import './styles.css';
@@ -29,7 +30,7 @@ export default class BookList extends Component{
     return(
       <div id="bookList">
         <div id="newBook">
-          <a href="/add-new-book"></a>
+          <a href="/add-new-book"><MdAdd /></a>
         </div>
         {this.state.books.map((book, index) => (
           <BookItem key={`${book.key}`} id={`${book.key}`} name={`${book.name}`} author={`${book.author}`} cover={`${book.cover}`}  />
