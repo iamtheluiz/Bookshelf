@@ -28,8 +28,11 @@ export default class BookList extends Component{
   render(){
     return(
       <div id="bookList">
+        <div id="newBook">
+          <a href="/add-new-book"></a>
+        </div>
         {this.state.books.map((book, index) => (
-          <BookItem name={`${book.name}`} author={`${book.author}`} cover={`${book.cover}`} key={`${book.key}`} />
+          <BookItem key={`${book.key}`} id={`${book.key}`} name={`${book.name}`} author={`${book.author}`} cover={`${book.cover}`}  />
         ))}
       </div>
     );

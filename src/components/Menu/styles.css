@@ -21,12 +21,6 @@ div#mainMenu>span{
     justify-content: center;
     align-items: center;
   }
-  div#newBook{
-    text-align: center;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-  }
   div#mainMenu>img{
     margin-left: -18px;
   }
@@ -38,7 +32,7 @@ div#mainMenu>span{
   }
 }
 
-div#newBook{
+/* div#newBook{
   display: flex;
   padding: 10px;
 }
@@ -66,4 +60,4 @@ div#newBook>a:hover{
 }
 div#newBook>a:hover::after{
   content: "Add New Book"
-}
+} */

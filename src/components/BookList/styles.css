@@ -5,3 +5,44 @@ div#bookList{
   justify-content: center;
   padding: 5px;
 }
+
+div#newBook{
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+}
+div#newBook>a{
+  color: white;
+  background-color: firebrick;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 37px;
+  border-radius: 100%;
+  font-size: 18pt;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+div#newBook>a::before{
+  content: " + ";
+}
+div#newBook>a:hover{
+  transition: width .2s ease-in-out;
+  border-radius: 5px;
+  width: 200px;
+}
+div#newBook>a:hover::after{
+  content: "Add New Book"
+}
+
+@media (max-width: 600px){
+  div#newBook{
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+}

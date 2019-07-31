@@ -26,10 +26,14 @@ export default class BookItem extends Component {
     });
   }
 
+  getBookInformation = () => {
+    window.location = `${window.location.origin}/book/${this.props.id}`;
+  }
+
   // Display
   render() {
     return (
-      <div className="bookItem" onMouseOver={this.showBookInfo} onMouseLeave={this.hideBookInfo} style={this.state.bookCover} >
+      <div className="bookItem" onClick={this.getBookInformation} onMouseOver={this.showBookInfo} onMouseLeave={this.hideBookInfo} style={this.state.bookCover} >
         <h3 style={this.state.infoDisplay}>{this.props.name}</h3>
         <span style={this.state.infoDisplay}>{this.props.author}</span>
       </div>

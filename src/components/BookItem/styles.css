@@ -9,6 +9,7 @@ div.bookItem{
   padding-bottom: 30px;
   border: 2px solid white;
   background-color: grey;
+  cursor: pointer;
 }
 div.bookItem>span{
   width: 100%;

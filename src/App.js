@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import AddNewBook from './pages/AddNewBook';
 import NotFound from './pages/NotFound';
+import BookDetails from './pages/BookDetails';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Switch>
         <Route path='/' exact component={Home} />
         <Route path='/add-new-book' exact component={AddNewBook} />
+        <Route path='/book/:id' exact component={BookDetails} />
         <Route path='*' component={NotFound} />
       </Switch>
     </BrowserRouter>

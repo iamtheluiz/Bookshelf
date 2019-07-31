@@ -1,0 +1,29 @@
+div#bookInformation{
+  box-sizing: border-box;
+  display: flex;
+  padding: 30px;
+}
+div#bookInformation>img{
+  box-sizing: border-box;
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+}
+div#bookInformation>div>h1{
+  font-size: 30pt;
+}
+div#bookInformation>div>span{
+  font-size: 15pt;
+}
+div#bookInformation>span::before{
+  content: 'Author: '
+}
+
+@media (max-width: 600px){
+  div#bookInformation>img{
+    margin: 0 auto;
+  }
+  div#bookInformation{
+    flex-direction: column;
+  }
+}
